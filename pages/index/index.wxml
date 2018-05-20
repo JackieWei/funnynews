@@ -1,16 +1,17 @@
-<scroll-view scroll-y style='height: 100%' bindscroll='onScrollHandler' bindscrolltoupper="onScrollToUpperHandler" bindscrolltolower="onScrollToLowerHandler" scroll-into-view='{{toView}}' scroll-top='{{scrollTop}}' upper-threshold="50px" lower-threshold="100px" enable-back-to-top scroll-with-animation>
-  <view id='home-search'>
-    <view id='home-location'>
+<scroll-view scroll-y style='height: {{scrollViewHeight}}px' bindscroll='onScrollHandler' bindscrolltoupper="onScrollToUpperHandler" bindscrolltolower="onScrollToLowerHandler" scroll-into-view='{{toView}}' scroll-top='{{scrollTop}}' upper-threshold="50px"
+  lower-threshold="100px" enable-back-to-top scroll-with-animation>
+  <view id='home-search' class='search-home'>
+    <view class='home-location'>
       <image lazy-load mode="widthFix" src='../assets/location.png' class='location-icon'></image>
       <label class='location-label'>{{address}}</label>
     </view>
-    <input class='location-search' placeholder='关键字搜索'></input>
+    <input class='location-search' placeholder='关键字搜索' bindtap='onSearchTap'></input>
   </view>
   <swiper class='func-icons-swpier' indicator-dots='{{true}}' autoplay='{{false}}' circular='{{true}}' vertical='{{false}}' interval='2000' duration='500' previous-margin='0' next-margin='0'>
     <block wx:for='{{funcs}}' wx:key='*this' wx:for-item="func">
       <swiper-item>
         <block class='func-icon-container' wx:for="{{func.icons}}" wx:key='*this' wx:for-item="item">
-          <image src="../assets/funcs/breakfast_200_icon.png" class="func-icon"/>
+          <image src="../assets/funcs/breakfast_200_icon.png" class="func-icon" />
         </block>
       </swiper-item>
     </block>
@@ -45,3 +46,16 @@
     </view>
   </view>
 </scroll-view>
+<view id='static-search' class='search-home {{staticSearchClass}}'>
+  <view class='home-location'>
+    <image lazy-load mode="widthFix" src='../assets/location.png' class='location-icon'></image>
+    <label class='location-label'>{{address}}</label>
+  </view>
+  <input class='location-search' placeholder='关键字搜索'></input>
+</view>
+<view id='static-tags' class='home-recommend-tags {{staticTagClass}}'>
+  <view class="tab-item {{currentRecommend==0?'active':''}}" data-current="0" bindtap="swichNav">健康</view>
+  <view class="tab-item {{currentRecommend==1?'active':''}}" data-current="1" bindtap="swichNav">情感</view>
+  <view class="tab-item {{currentRecommend==2?'active':''}}" data-current="2" bindtap="swichNav">职场</view>
+  <view class="tab-item {{currentRecommend==3?'active':''}}" data-current="3" bindtap="swichNav">育儿</view>
+</view>

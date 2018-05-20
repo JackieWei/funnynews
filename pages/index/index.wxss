@@ -1,8 +1,9 @@
 /* search section */
-#home-search {
+.search-home {
   display: flex;
+  background: purple;
 }
-#home-location {
+.home-location {
   margin: 0 5rpx;
   max-width: 280rpx;
   overflow: hidden;
@@ -68,6 +69,7 @@
   border-top: 1rpx solid #cccccc;
   border-bottom: 1rpx solid #cccccc;
   padding: 15rpx 0;
+  background: blue;
 }
 
 .home-recommend-tags .tab-item {
@@ -92,4 +94,25 @@
 .home-recommend-list .item-ans .avatar .img {
   width: 100rpx;
   height: 100rpx;
+}
+
+/* static parts */
+#static-search {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+}
+
+#static-tags {
+  position: fixed;
+  left: 0;
+  top: 19px;
+  width: 100%;
+  display: flex;
+}
+
+.hide {
+  visibility: hidden;
 }
