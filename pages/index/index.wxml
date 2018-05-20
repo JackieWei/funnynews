@@ -5,7 +5,7 @@
       <image lazy-load mode="widthFix" src='../assets/location.png' class='location-icon'></image>
       <label class='location-label'>{{address}}</label>
     </view>
-    <input class='location-search' placeholder='关键字搜索' bindtap='onSearchTap'></input>
+    <input class='location-search' placeholder='关键字搜索' catchtap='onSearchTap'></input>
   </view>
   <swiper class='func-icons-swpier' indicator-dots='{{true}}' autoplay='{{false}}' circular='{{true}}' vertical='{{false}}' interval='2000' duration='500' previous-margin='0' next-margin='0'>
     <block wx:for='{{funcs}}' wx:key='*this' wx:for-item="func">
@@ -47,11 +47,11 @@
   </view>
 </scroll-view>
 <view id='static-search' class='search-home {{staticSearchClass}}'>
-  <view class='home-location'>
+  <view class='home-location {{extendSearch ? "removed" : ""}}'>
     <image lazy-load mode="widthFix" src='../assets/location.png' class='location-icon'></image>
     <label class='location-label'>{{address}}</label>
   </view>
-  <input class='location-search' placeholder='关键字搜索'></input>
+  <input class='location-search' placeholder='关键字搜索' class='{{extendSearch ? "extended" : ""}}' catchtap="onSearchTap"></input>
 </view>
 <view id='static-tags' class='home-recommend-tags {{staticTagClass}}'>
   <view class="tab-item {{currentRecommend==0?'active':''}}" data-current="0" bindtap="swichNav">健康</view>

@@ -116,3 +116,11 @@
 .hide {
   visibility: hidden;
 }
+
+.extended {
+  width: 100%;
+}
+
+.removed {
+  display: none;
+}

@@ -5,6 +5,7 @@ Page({
     scrollViewHeight: 0,
     staticSearchClass: 'hide',
     staticTagClass: 'hide',
+    extendSearch: false,
     toView: "func-icons-swpier",
     funcs: [{
       icons: [{
@@ -52,7 +53,8 @@ Page({
   onSearchTap: function(e) {
     wx.navigateTo({
       url: '../search/searchresult',
-    })
+    });
+    
   },
   naviToTab: function (event) {
     this.setData({
@@ -70,11 +72,11 @@ Page({
       this.hideFixedSearch();
     }
 
-    if (top > 280) {
+    if (top > 168) {
       this.showExtendedSearch();
     }
 
-    if (top < 280) {
+    if (top < 168) {
       this.hideExtendedSearch();
     }
 
