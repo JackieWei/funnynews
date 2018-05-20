@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "看新闻",
+        "iconPath": "pages/assets/news_81_icon.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "玩游戏",
+        "iconPath": "pages/assets/game_81_icon.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "好运来",
+        "iconPath": "pages/assets/lucky_81_icon.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "关于我",
+        "iconPath": "pages/assets/aboutme_81_icon.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000
+  },
+  "debug":true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cccccc",
+    "navigationBarTitleText": "乐玩资讯",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundColor": "#cccccc",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  }
+}
