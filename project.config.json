@@ -15,6 +15,7 @@
 	"appid": "wxf869606a34673adb",
 	"projectname": "funnews",
 	"isGameTourist": false,
+  "qcloudRoot": "./serv/",
 	"condition": {
 		"search": {
 			"current": -1,
